@@ -1,0 +1,16 @@
+package chess.boardClasses;
+
+public interface Piece {
+	
+	public char positionx = 'A';
+	public int positiony = 1;
+	
+	public char getPositionx();
+	
+	public int getPositiony();
+	
+	public void move(char positionx, int positiony);
+	
+	public void remove();
+	
+}
