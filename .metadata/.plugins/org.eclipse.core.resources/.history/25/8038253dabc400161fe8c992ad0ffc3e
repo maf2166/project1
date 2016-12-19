@@ -1,0 +1,49 @@
+package chess.boardClasses;
+
+public class Piece {
+	private boolean isWhite;
+	private String type;
+	private char colPos;
+	private int rowPos;
+	
+	public Piece(boolean isWhite, String type, char colPos, int rowPos) {
+		this.setWhite(isWhite);
+		this.setType(type);
+		this.setColPos(colPos);
+		this.setRowPos(rowPos);
+	}
+
+	public boolean isWhite() {
+		return isWhite;
+	}
+
+	public void setWhite(boolean isWhite) {
+		this.isWhite = isWhite;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public char getColPos() {
+		return colPos;
+	}
+
+	public void setColPos(char colPos) {
+		this.colPos = colPos;
+	}
+
+	public int getRowPos() {
+		return rowPos;
+	}
+
+	public void setRowPos(int rowPos) {
+		this.rowPos = rowPos;
+	}
+	
+	
+}

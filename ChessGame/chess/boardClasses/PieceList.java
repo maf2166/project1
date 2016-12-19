@@ -1,0 +1,6 @@
+package chess.boardClasses;
+
+public class PieceList {
+	
+	
+}
