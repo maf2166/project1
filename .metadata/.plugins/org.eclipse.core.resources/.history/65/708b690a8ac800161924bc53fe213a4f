@@ -1,0 +1,56 @@
+package chess.parts;
+
+public class Board {
+	public static Piece[][] boardArray = new Piece[8][8];
+	
+	public Board() {
+		newGame(); 
+		
+	}
+	
+	public static void newGame() {
+		//white pawns
+		for (int i = 0; i < 8; i++) {
+			boardArray[1][i] = new Piece('p', 'W');
+			boardArray[1][i].setRow(1);
+			boardArray[1][i].setColumn(i);
+			
+		}
+		//black pawns
+		for (int i = 0; i < 8; i++) {
+			boardArray[6][i] = new Piece('p', 'B');
+			boardArray[6][i].setRow(6);
+			boardArray[6][i].setColumn(i);
+		}
+		
+		//setting white pieces
+		for (int i = 0; i < 2; i++) {
+			int row;
+			char color;
+			if (i == 0) {
+				color = 'W';
+				row = 0;
+			} else {
+				color = 'B';
+				row = 7;
+			}
+			boardArray[row][0] = new Piece('r', color);
+			boardArray[row][1] = new Piece('k', color);
+			boardArray[row][2] = new Piece('b', color);
+			boardArray[row][3] = new Piece('Q', color);
+			boardArray[row][4] = new Piece('K', color);
+			boardArray[row][5] = new Piece('b', color);
+			boardArray[row][6] = new Piece('k', color);
+			boardArray[row][7] = new Piece('r', color);
+			
+			for (int k = 0; i < 8; k++) {
+				boardArray[row][k].setRow(row);
+				boardArray[row][k].setColumn(k);
+			}
+		}
+	}
+	
+	public void movePiece(Piece toBeMoved) {
+		
+	}
+}

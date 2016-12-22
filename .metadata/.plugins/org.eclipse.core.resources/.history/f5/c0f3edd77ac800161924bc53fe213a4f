@@ -1,0 +1,5 @@
+package chess.parts;
+
+public class Piece {
+
+}

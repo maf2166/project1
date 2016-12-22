@@ -1,0 +1,40 @@
+package chess.parts;
+
+public class Piece {
+	public char type;
+	public int numOfMoves;
+	public char color;
+	public boolean firstMove = false;
+	
+	public Piece(char type, char color) {
+		this.type = type;
+		this.color = color;
+		firstMove = true;
+	}
+	
+	//returns the number of moves that his piece can move
+	public int getNumOfMoves() {
+		if (type == 'K' || type == 'p') {
+			if (type == 'p' && firstMove) {
+				return 2;
+			} else {
+				return 1;
+			}
+		} else if (type == 'k') {
+			return 3;
+		} else {
+			return 8;
+		}
+	}
+	
+	public void setFirstMove(boolean firstMove) {
+		this.firstMove = firstMove;
+	}
+	
+	@Override
+	public String toString() {
+		String toReturn = type + "(" + color + ")";
+		return toReturn;
+	}
+	
+}

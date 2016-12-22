@@ -1,0 +1,54 @@
+package chess;
+
+import chess.parts.Piece;
+
+public class Game {
+	public static Piece[][] boardArray = new Piece[8][8];
+	
+	public static void main(String[] args) {
+		fillBoard();
+		for (int i = 0; i < 8; i++) {
+			for (int j = 0; j < 8; j++) {
+				if (j == 7) {
+					System.out.println(boardArray[i][j]);
+				} else {
+					System.out.print(boardArray[i][j] + ", ");
+				}
+			}
+		}
+
+	}
+	
+	public static void fillBoard() {
+		//white pawns
+		for (int i = 0; i < 8; i++) {
+			boardArray[1][i] = new Piece('p', 'W');
+		}
+		//black pawns
+		for (int i = 0; i < 8; i++) {
+			boardArray[6][i] = new Piece('p', 'B');
+		}
+		
+		//setting white pieces
+		for (int i = 0; i < 2; i++) {
+			int column;
+			char color;
+			if (i == 0) {
+				color = 'W';
+				column = 0;
+			} else {
+				color = 'B';
+				column = 7;
+			}
+			boardArray[column][0] = new Piece('r', color);
+			boardArray[column][1] = new Piece('k', color);
+			boardArray[column][2] = new Piece('b', color);
+			boardArray[column][3] = new Piece('Q', color);
+			boardArray[column][4] = new Piece('K', color);
+			boardArray[column][5] = new Piece('b', color);
+			boardArray[column][6] = new Piece('k', color);
+			boardArray[column][7] = new Piece('r', color);
+		}
+	}	
+
+}

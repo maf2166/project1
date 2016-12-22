@@ -1,0 +1,19 @@
+package chess;
+
+import chess.parts.Board;
+import chess.parts.Piece;
+
+public class Game {
+	
+	
+	public static void main(String[] args) {
+		Board gameBoard = new Board();
+		gameBoard.printBoard();
+		
+		gameBoard.movePiece(1, 0, 3, 0);
+		
+		System.out.println();
+		gameBoard.printBoard();
+	}
+	
+}

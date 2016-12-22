@@ -1,0 +1,14 @@
+package chess;
+
+import chess.parts.Board;
+import chess.parts.Piece;
+
+public class Game {
+	
+	
+	public static void main(String[] args) {
+		Board gameBoard = new Board();
+		//gameBoard.printBoard();
+	}
+	
+}

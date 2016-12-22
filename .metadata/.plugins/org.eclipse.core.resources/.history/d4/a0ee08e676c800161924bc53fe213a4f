@@ -1,0 +1,9 @@
+package chess.boardClasses;
+
+public class BoardArray {
+	
+	
+	public BoardArray(){
+		
+	}
+}

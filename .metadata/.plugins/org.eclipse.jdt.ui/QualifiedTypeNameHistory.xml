@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="chess.parts.Piece"/>
+<fullyQualifiedTypeName name="chess.parts.Board"/>
+<fullyQualifiedTypeName name="ch03.stacks.LinkedStack"/>
+</qualifiedTypeNameHistroy>
