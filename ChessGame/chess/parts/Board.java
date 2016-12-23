@@ -82,6 +82,10 @@ public class Board {
 	}
 	
 	public void playerMove(int oldRow, int oldColumn, int newRow, int newColumn) {
+		if (!(boardArray[newRow][newColumn] == null)) {
+			takePiece(oldRow, oldColumn, newRow, newColumen);
+		} else if () // if it is the same color then it cant be allowed from availible moves
+		
 		/*
 		 * In this method I need checks to see if the space has a piece already, what color it is
 		 * and if this move puts the other player in check or checkmate
@@ -96,9 +100,12 @@ public class Board {
 		boardArray[newRow][newColumn].setColumn(newColumn);
 	}
 	
-	public void takePiece() {
-		/*
-		 * should add taken piece to respective linkedstack then move the remaining piece to the new location
-		 */
+	public void takePiece(int oldRow, int oldColumn, int newRow, int newColumn) {
+		if (boardArray[newRow][newColumn].color == 'W') {
+			blackTaken.push(boardArray[newRow][newColumn]);
+		} else {
+			whiteTaken.push(boardArray[newRow][newColumn]);
+		}
+		movePiece(oldRow, oldColumn, newRow, newColumn);
 	}
 }
